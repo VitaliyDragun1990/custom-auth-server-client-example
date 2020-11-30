@@ -1,0 +1,29 @@
+plugins {
+    id 'org.springframework.boot' version '2.4.0' apply false
+    id 'io.spring.dependency-management' version '1.0.10.RELEASE' apply false
+}
+
+allprojects {
+    group = 'org.vdragun'
+
+    ext {
+        jjwtVersion = '0.9.1'
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'io.spring.dependency-management'
+
+    sourceCompatibility = '1.11'
+    targetCompatibility = '1.11'
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+}
