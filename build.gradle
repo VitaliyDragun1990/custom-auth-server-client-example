@@ -7,7 +7,8 @@ allprojects {
     group = 'org.vdragun'
 
     ext {
-        jjwtVersion = '0.9.1'
+        jjwtVersion = '0.11.1'
+        jaxbVersion = '2.3.2'
     }
 }
 
